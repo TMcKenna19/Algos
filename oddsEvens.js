@@ -1,4 +1,4 @@
-// Create a function that accepts an array of numbers. Every time that array has 3 odd values in a row print "Thats odd!" Every tim the array has 3 even values in a row , print "Even more so!"
+// Create a function that accepts an array of numbers. Every time that array has 3 odd values in a row print "Thats odd!" Every time the array has 3 even values in a row , print "Even more so!"
 
 //1. create a function (that accepts an array) [x]
 //2. create some variables [x]
@@ -17,6 +17,7 @@ function oddsEvens(arr){
         if(arr[i]%2 == 0){
             evens++
             odds = 0
+            console.log(arr[i])
         }else {
             odds++
             evens = 0
@@ -34,5 +35,5 @@ function oddsEvens(arr){
     }
 }
 
-var myArr = [1,2,3,5,8,8,8]
+var myArr = [3,3,3,4,4,4,5,6]
 oddsEvens(myArr)
