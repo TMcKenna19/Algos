@@ -71,7 +71,7 @@ printArryAvg([68,97,95,99,92,94])
 
 //(7) Array with Odds Create an array with odd integers from 1-255. 
 function oddArray(){
-    myOddArr = [];
+   var myOddArr = [];
     for(var i = 0; i < 256; i++){
         if(i % 2 == 1){
             myOddArr.push(i)
@@ -98,3 +98,57 @@ function greaterThanY(arr, y){
 }
 greaterThanY([1,2,3,4,6,7,8,9,10], 5);
 
+//(9) 
+//Max, Min, Average Given an array, print max, min and average values.
+
+function minMaxAvg(arr){
+    var min = arr[0];
+    var max = arr[0];
+    var sum = arr[0];
+
+    for(var i=1; i<arr.length; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+        if(arr[i] < min){
+            min = arr[i];
+        }
+        sum += arr[i];
+    }
+
+    console.log("min =",min,"max =",max);
+    console.log("Average = ", sum / arr.length);
+}
+minMaxAvg([93,90,97,90]);
+
+//(10)
+//Square the Values, Given an array, square each value in the array.
+
+function squareArray(arr){
+    var sqrArr = [];
+
+    for(var i=0; i<arr.length; i++){
+      sqrArr.push(arr[i] * arr[i]);  
+    }
+    console.log(sqrArr)
+}
+squareArray([9,9,9])
+
+
+//(11)
+// Zero Out Negative Numbers, Set negative array values to zero.
+
+function zeroOutNegNums(arr){
+    var myArr = [];
+
+    for(var i=0; i<arr.length; i++){
+        if(arr[i] < 0){
+            arr[i] = 0
+            myArr.push(arr[i]);
+        }else{
+            myArr.push(arr[i]);
+        }
+    }
+    console.log(myArr);
+}
+zeroOutNegNums([-1,2,3,-5,3,-6,-2,6,-9]);
