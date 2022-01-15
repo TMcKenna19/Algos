@@ -152,3 +152,61 @@ function zeroOutNegNums(arr){
     console.log(myArr);
 }
 zeroOutNegNums([-1,2,3,-5,3,-6,-2,6,-9]);
+
+//(12)
+//Shift Array Values, Shift array values: drop the first and leave ​'0'​ at end
+
+function shiftArray(arr){
+    for(var i=1; i<arr.length; i++){
+        arr[i-1] = arr[i]
+    }
+    arr[arr.length - 1] = 0;
+    console.log(arr)
+}
+shiftArray([1,2,3,4,5]);
+
+//(13)
+//Swap String For Array Negative Values, Replace any negative array values with ​'Hello'​.
+
+function negativeToString(arr){
+    
+    for(var i=0; i<arr.length; i++){
+        if(arr[i] < 0){
+            arr[i] = "Hello";
+        }
+        console.log(arr[i]);
+    }
+
+}
+negativeToString([1,2,3,-4,5]);
+
+//Linear Search
+function linearSearch(array,key){
+    for(var i = 0; i<array.length; i++){
+        if(array[i] == key){
+            console.log(key,"is located at location",i)
+        }
+    }
+    
+}
+linearSearch([1,2,-3,5,12,32,19,-45],5)
+
+//Recursion
+function countDown(n){
+    for(let i = n; i > 0; i--){
+        console.log(i)
+    }
+    console.log('Hooray')
+}
+countDown(5)
+
+function countDownRecursive(n){
+    if(n <= 0){
+        console.log('Hooray')
+        return
+    }
+    console.log(n)
+    countDownRecursive(n-1)
+}
+countDownRecursive(3)
+
