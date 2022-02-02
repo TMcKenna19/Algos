@@ -180,7 +180,16 @@ function negativeToString(arr){
 }
 negativeToString([1,2,3,-4,5]);
 
-//Linear Search
+
+
+
+//==============================//
+//   Practice and Basics 
+//==============================//
+
+
+
+//** Linear Search **
 function linearSearch(array,key){
     for(var i = 0; i<array.length; i++){
         if(array[i] == key){
@@ -191,7 +200,7 @@ function linearSearch(array,key){
 }
 linearSearch([1,2,-3,5,12,32,19,-45],5)
 
-//Recursion
+
 function countDown(n){
     for(let i = n; i > 0; i--){
         console.log(i)
@@ -200,6 +209,9 @@ function countDown(n){
 }
 countDown(5)
 
+
+
+//** Recursion **
 function countDownRecursive(n){
     if(n <= 0){
         console.log('Hooray')
@@ -210,3 +222,36 @@ function countDownRecursive(n){
 }
 countDownRecursive(3)
 
+
+
+
+//** Swap variables **
+function varibaleSwap(){
+    
+    var fruitOne = "Apple";
+    var fruitTwo = "Banana";
+
+    var temp = fruitTwo; //Banana
+    fruitTwo = fruitOne; //Apple 
+    fruitOne = temp;
+    console.log("Fruit One = " + fruitOne + " & " + "Fruit Two = " + fruitTwo);
+}
+varibaleSwap();
+//OutPut
+//fruitOne = "Banana" fruitTwo = "Apple"
+
+
+//** Reversing an array **
+// [1,2,3,4,5] --> [5,4,3,2,1]
+
+function revArray(arr){
+    for(var left=0; left < arr.length/2; left++){
+        var right = arr.length-1-left;
+        var temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+    }
+    return arr
+}
+var result1 = revArray([1,2,3,4,5]);
+    console.log(result1);

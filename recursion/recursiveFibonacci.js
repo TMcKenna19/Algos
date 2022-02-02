@@ -8,13 +8,20 @@
 // rFibonacci(6) = rFibonacci(4) + rFibonacci(5)      => 8
 
 function recursiveFibonacci(num){
-    if(num == 1 || num == 2 ){
+    if(num === 1 || num === 2 ){
         return 1;
 
     }else{
         console.log(recursiveFibonacci(num - 1) + recursiveFibonacci(num - 2));
     }
 }
-recursiveFibonacci(6);
+recursiveFibonacci(5);
 
-//go back and make sure you understand this algo 
+
+function fibonacci(num) {
+    if (num <= 1) return 1;
+  
+    fibonacci(num - 1) + fibonacci(num - 2);
+  }
+fibonacci(6);
+ 
